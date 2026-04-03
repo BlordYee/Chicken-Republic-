@@ -1,0 +1,142 @@
+/* CSS Variables - Design Tokens */
+:root {
+    --primary-red: #D32F2F;
+    --accent-yellow: #FFC107;
+    --dark-charcoal: #212121;
+    --light-gray: #F5F5F5;
+    --white: #FFFFFF;
+    --success-green: #4CAF50;
+    --shadow: 0 4px 20px rgba(0,0,0,0.1);
+    --border-radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset & Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    font-family: 'Poppins', sans-serif; 
+    line-height: 1.6; 
+    color: var(--dark-charcoal);
+    overflow-x: hidden;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Mobile-First Typography */
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.1; }
+h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 700; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+
+/* Header */
+.header { 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    background: rgba(255,255,255,0.95); 
+    backdrop-filter: blur(10px); 
+    z-index: 1000; 
+    padding: 1rem 0; 
+}
+.header .container { display: flex; justify-content: space-between; align-items: center; }
+
+/* Hero Section */
+.hero { 
+    min-height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    position: relative; 
+    overflow: hidden;
+}
+.hero-bg video, .hero-bg img { 
+    position: absolute; 
+    top: 0; left: 0; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+.hero-content { 
+    max-width: 600px; 
+    z-index: 2; 
+    color: white; 
+    padding: 2rem; 
+}
+
+/* Buttons - High Contrast CTAs */
+.btn { 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 0.5rem; 
+    padding: 1rem 2rem; 
+    border-radius: var(--border-radius); 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 1rem; 
+    transition: var(--transition); 
+    border: none; 
+    cursor: pointer;
+}
+.btn-primary { 
+    background: var(--primary-red); 
+    color: white; 
+}
+.btn-primary:hover { 
+    transform: translateY(-2px); 
+    box-shadow: 0 10px 30px rgba(211,47,47,0.4); 
+}
+
+/* Floating Order Button - Always Visible */
+.floating-order-btn { 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    background: var(--primary-red); 
+    color: white; 
+    padding: 1rem 1.5rem; 
+    border-radius: 50px; 
+    box-shadow: var(--shadow); 
+    z-index: 1001; 
+    transition: var(--transition);
+}
+.floating-order-btn:hover { transform: scale(1.05); }
+
+/* Product Cards */
+.product-card { 
+    background: white; 
+    border-radius: var(--border-radius); 
+    overflow: hidden; 
+    box-shadow: var(--shadow); 
+    transition: var(--transition);
+}
+.product-card:hover { transform: translateY(-10px); }
+
+/* Countdown Timer */
+.countdown { 
+    display: flex; 
+    gap: 1rem; 
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    color: var(--accent-yellow); 
+    margin: 1rem 0;
+}
+.countdown span { 
+    background: rgba(0,0,0,0.7); 
+    padding: 0.5rem 1rem; 
+    border-radius: 8px; 
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+}
+
+/* Animations */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up { animation: slideUp 0.8s ease-out forwards; }
+
+/* Performance Optimizations */
+img { max-width: 100%; height: auto; }
+.lazy { opacity: 0; transition: opacity 0.3s; }
+.lazy.loaded { opacity: 1; }
