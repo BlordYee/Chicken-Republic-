@@ -1,0 +1,20 @@
+<!-- GUEST CHECKOUT | 3 FIELDS ONLY -->
+<div class="checkout-container">
+    <div class="order-summary sticky">
+        <h3>Your Order (3 items)</h3>
+        <div class="items-list"><!-- Cart items --></div>
+        <div class="total">₦4,750 <span class="save">You save ₦500</span></div>
+        <button class="btn-checkout">Pay ₦4,750</button>
+    </div>
+    
+    <form class="checkout-form">
+        <div class="minimal-fields">
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="text" placeholder="Delivery Address">
+            <div class="payment-methods">
+                <label><input type="radio" name="payment" value="card"> Card</label>
+                <label><input type="radio" name="payment" value="cash"> Cash on Delivery</label>
+            </div>
+        </div>
+    </form>
+</div>
