@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Republic Nigeria - Hot Fresh Naija Chicken | Order Now</title>
+    <meta name="description" content="Nigeria's favorite fried chicken. Order hot, fresh chicken meals delivered fast. 100+ locations nationwide. Download app & save!">
+    
+    <!-- SEO Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Chicken Republic",
+        "description": "Nigeria's leading fast food chain serving fresh fried chicken, rice meals, and Naija favorites.",
+        "url": "https://chickenrepublic.com",
+        "telephone": "+234-800-CHICKEN",
+        "priceRange": "₦",
+        "servesCuisine": "Fast Food, Nigerian",
+        "currenciesAccepted": "NGN"
+    }
+    </script>
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sticky Mobile Order Button -->
+    <div class="floating-order-btn" id="floatingBtn">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Order Now</span>
+        <div class="cart-count" id="cartCount">0</div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Chicken Republic Nigeria" width="160" height="40">
+            </div>
+            <nav class="nav-mobile">
+                <span class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </span>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="locations.html" class="nav-link">Locations</a></li>
+                    <li><a href="promotions.html" class="nav-link">Deals</a></li>
+                    <li><a href="loyalty.html" class="nav-link">Loyalty</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="menu.html" class="btn btn-primary">Order Now</a>
+                <a href="#locations" class="btn btn-secondary"><i class="fas fa-map-marker-alt"></i> Find Store</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION - Primary Conversion -->
+    <section id="hero" class="hero">
+        <div class="hero-bg">
+            <video autoplay muted loop playsinline>
+                <source src="assets/images/hero-chicken.mp4" type="video/mp4">
+                <img src="assets/images/hero-chicken.jpg" alt="Hot fresh fried chicken">
+            </video>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-slide-up">
+                <span class="gradient-text">Hot. Fresh. Naija Style.</span>
+            </h1>
+            <p class="hero-subtitle animate-slide-up delay-1">
+                Order your favourites in <strong>minutes</strong>. Delivered hot or pickup ready.
+            </p>
+            <div class="hero-ctas animate-slide-up delay-2">
+                <a href="menu.html" class="btn btn-hero-primary">
+                    <i class="fas fa-shopping-cart"></i> Order Now
+                </a>
+                <a href="menu.html" class="btn btn-hero-secondary">
+                    <i class="fas fa-eye"></i> View Menu
+                </a>
+            </div>
+            <div class="hero-trust animate-slide-up delay-3">
+                <span>🇳🇬 2,000+ orders today</span>
+                <span>⚡ Average 25min delivery</span>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- BEST SELLERS -->
+    <section class="bestsellers section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Most Ordered Today</h2>
+                <p>Our hottest sellers - fresh daily</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="assets/images/spicy-chicken.jpg" alt="Spicy Fried Chicken" loading="lazy">
+                    <div class="product-info">
+                        <h3>Spicy Fried Chicken (6pc)</h3>
+                        <div class="product-price">₦2,500</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(1,247)</span>
+                        </div>
+                        <button class="btn btn-add-cart" data-product="spicy-chicken">
+                            <i class="fas fa-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- 5 more product cards... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CURRENT PROMO - URGENCY -->
+    <section class="promo section-padding">
+        <div class="container">
+            <div class="promo-card">
+                <div class="promo-image">
+                    <img src="assets/images/promo-family-meal.jpg" alt="Family Feast Deal">
+                </div>
+                <div class="promo-content">
+                    <div class="promo-badge">LIMITED TIME</div>
+                    <h2>Family Feast Deal</h2>
+                    <p class="promo-save">Save ₦1,500!</p>
+                    <div class="promo-price">
+                        <span class="old-price">₦8,500</span>
+                        <span class="new-price">₦7,000</span>
+                    </div>
+                    <div class="countdown" id="countdown">
+                        <span><span id="hours">02</span>h</span>
+                        <span><span id="minutes">47</span>m</span>
+                        <span><span id="seconds">23</span>s</span>
+                    </div>
+                    <a href="promotions.html" class="btn btn-promo">Grab Deal Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="features section-padding">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Freshly Made Daily</h3>
+                    <p>Chicken fried to perfection every hour. Never frozen, always fresh.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Average 25 minutes. Hot meals guaranteed or it's free.</p>
+                </div>
+                <!-- 2 more features -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="testimonials section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Naija Loves</h2>
+            </div>
+            <div class="testimonials-slider">
+                <!-- Testimonial cards with 5-star ratings -->
+            </div>
+        </div>
+    </section>
+
+    <!-- APP DOWNLOAD PUSH -->
+    <section class="app-promo section-padding">
+        <div class="container">
+            <div class="app-promo-content">
+                <h2>Skip the Queue. Order on App.</h2>
+                <p>Exclusive app deals + 20% faster ordering</p>
+                <div class="app-buttons">
+                    <a href="#" class="app-btn google-play">
+                        <i class="fab fa-google-play"></i>
+                        <span>GET IT ON<br>Google Play</span>
+                    </a>
+                    <a href="#" class="app-btn app-store">
+                        <i class="fab fa-apple"></i>
+                        <span>Download on the<br>App Store</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION FINDER -->
+    <section id="locations" class="locations section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Find Your Nearest Chicken Republic</h2>
+            </div>
+            <div class="location-finder">
+                <div class="location-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Enter location or use current">
+                    <button class="btn btn-primary">Find Stores</button>
+                </div>
+                <div class="location-list">
+                    <!-- Dynamic store cards -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/images/logo-white.png" alt="Chicken Republic">
+                    <p>Nigeria's #1 Chicken Spot. Hot, fresh, affordable.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="locations.html">Find Store</a></li>
+                        <li><a href="loyalty.html">Loyalty</a></li>
+                    </ul>
+                </div>
+                <!-- More footer columns -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chicken Republic. All rights reserved. | <a href="#">Privacy</a> | <a href="#">Terms</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+</body>
+                      </html>
